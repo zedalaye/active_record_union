@@ -41,7 +41,7 @@ module ActiveRecord
         build_union_relation(from, other)
       end
 
-      if ActiveRecord.gem_version >= Gem::Version.new('5.2.0.beta2')
+      if ActiveRecord.gem_version >= Gem::Version.new('5.2.0')
         # Since Rails 5.2, binds are maintained only in the Arel AST.
         def build_union_relation(arel_table_alias, _other)
           @klass.unscoped.from(arel_table_alias)

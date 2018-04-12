@@ -41,7 +41,7 @@ describe ActiveRecord::Relation do
     end
 
     def bind_values_from_relation(relation)
-      if ActiveRecord.gem_version >= Gem::Version.new('5.2.0.beta2')
+      if ActiveRecord.gem_version >= Gem::Version.new('5.2.0')
         relation.arel_table.class.engine.connection.visitor.accept(
           relation.arel.ast, Arel::Collectors::Bind.new
         ).value.map(&:value)
