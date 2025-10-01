@@ -188,6 +188,9 @@ This is a gem not a Rails pull request because the standard of code quality for 
 
 ## Changelog
 
+**1.4.0** - October 1, 2025
+  - Ready for Rails 8.0! Support for Rails < 6 dropped. Updates provided by [@timdiggins](https://github.com/frederikspang) and [@frederikspang](https://github.com/frederikspang).
+
 **1.3.0** - January 14, 2018
   - Ready for Rails 5.2! Updates provided by [@glebm](https://github.com/glebm).
 
