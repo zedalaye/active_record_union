@@ -18,13 +18,10 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/}) + spec.files.grep(%r{^bin/})
   spec.require_paths = ["lib"]
 
-  spec.add_dependency "activerecord", ">= 4.0"
+  spec.add_dependency "activerecord", ">= 6.0"
 
-  spec.add_development_dependency "bundler", "~> 1.6"
+  spec.add_development_dependency "bundler"
   spec.add_development_dependency "rake"
   spec.add_development_dependency "rspec",   "~> 3.0"
   spec.add_development_dependency "pry"
-  spec.add_development_dependency "sqlite3"
-  spec.add_development_dependency "pg"
-  spec.add_development_dependency "mysql2"
 end
