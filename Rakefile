@@ -22,11 +22,11 @@ module TestTasks
 
   def run_one(env, cmd = "bundle install && #{TEST_CMD}")
     full_cmd = to_bash_cmd_with_env(cmd, env)
-    exec(full_cmd)
+    Bundler.with_unbundled_env { exec(full_cmd) }
   end
 
   def run(env, cmd)
-    Bundler.with_clean_env do
+    Bundler.with_unbundled_env do
       full_cmd = to_bash_cmd_with_env(cmd, env)
       $stderr.puts full_cmd
       isSuccess = system(full_cmd)
